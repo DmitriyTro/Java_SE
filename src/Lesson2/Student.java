@@ -12,7 +12,16 @@ public class Student {
 }
 
 class StudentTest {
+
+	double averageGrade(Student student) {
+		double avgGrade = (student.mathematicsAverageGrade + student.economicsAverageGrade +
+				student.foreignLanguageAverageGrade) / 3;
+		return avgGrade;
+	}
+
 	public static void main(String[] args) {
+		StudentTest studentTest = new StudentTest();
+
 		Student firstStudent = new Student();
 		firstStudent.studentId = 1;
 		firstStudent.firstName = "Nikolay";
@@ -41,12 +50,12 @@ class StudentTest {
 		thirdStudent.foreignLanguageAverageGrade = 6.4;
 
 		System.out.println("Средняя арифметическая оценка студента: " + firstStudent.firstName + " " + firstStudent.surname + " = " +
-				(firstStudent.mathematicsAverageGrade + firstStudent.economicsAverageGrade + firstStudent.foreignLanguageAverageGrade) / 3);
+				studentTest.averageGrade(firstStudent));
 
 		System.out.println("Средняя арифметическая оценка студента: " + secondStudent.firstName + " " + secondStudent.surname + " = " +
-				(secondStudent.mathematicsAverageGrade + secondStudent.economicsAverageGrade + secondStudent.foreignLanguageAverageGrade) / 3);
+				studentTest.averageGrade(secondStudent));
 
 		System.out.println("Средняя арифметическая оценка студента: " + thirdStudent.firstName + " " + thirdStudent.surname + " = " +
-				(thirdStudent.mathematicsAverageGrade + thirdStudent.economicsAverageGrade + thirdStudent.foreignLanguageAverageGrade) / 3);
+				studentTest.averageGrade(thirdStudent));
 	}
 }
