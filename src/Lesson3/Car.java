@@ -1,7 +1,5 @@
 package Lesson3;
 
-import java.util.concurrent.Callable;
-
 public class Car {
 	String color;
 	String engine;
@@ -19,6 +17,10 @@ public class Car {
 
 	int brake(int speed) {
 		this.speed -= speed;
+		return speed;
+	}
+
+	int speed1() {
 		return speed;
 	}
 

@@ -1,7 +1,5 @@
 package Lesson3;
 
-import java.awt.event.WindowFocusListener;
-
 public class Employee {
 	int id;
 	String surname;
