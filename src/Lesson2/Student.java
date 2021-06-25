@@ -9,6 +9,24 @@ public class Student {
 	double mathematicsAverageGrade;
 	double economicsAverageGrade;
 	double foreignLanguageAverageGrade;
+
+	Student() {
+	}
+
+	Student(int id, String firstName, String surname, int course) {
+		this(id, firstName, surname, course, 0.0, 0.0, 0.0);
+	}
+
+	Student(int studentId, String firstName, String surname, int course, double mathematicsAverageGrade,
+	        double economicsAverageGrade, double foreignLanguageAverageGrade) {
+		this.studentId = studentId;
+		this.firstName = firstName;
+		this.surname = surname;
+		this.course = course;
+		this.mathematicsAverageGrade = mathematicsAverageGrade;
+		this.economicsAverageGrade = economicsAverageGrade;
+		this.foreignLanguageAverageGrade = foreignLanguageAverageGrade;
+	}
 }
 
 class StudentTest {
@@ -21,6 +39,9 @@ class StudentTest {
 
 	public static void main(String[] args) {
 		StudentTest studentTest = new StudentTest();
+		Student student1 = new Student();
+		Student student2 = new Student(4, "Ivan", "Popov", 1);
+		Student student3 = new Student(4, "Victor", "Ivanov", 3, 6.5, 7.3, 8.8);
 
 		Student firstStudent = new Student();
 		firstStudent.studentId = 1;
@@ -48,6 +69,7 @@ class StudentTest {
 		thirdStudent.mathematicsAverageGrade = 7.1;
 		thirdStudent.economicsAverageGrade = 6.0;
 		thirdStudent.foreignLanguageAverageGrade = 6.4;
+
 
 		System.out.println("Средняя арифметическая оценка студента: " + firstStudent.firstName + " " + firstStudent.surname + " = " +
 				studentTest.averageGrade(firstStudent));
