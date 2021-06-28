@@ -3,7 +3,7 @@ package Lesson6;
 public class Student {
 	String name;
 	int course;
-	static int count;
+	public static int count;
 	private static final int TEST = 2;
 	int a;
 
@@ -65,7 +65,7 @@ public class Student {
 
 		System.out.println(PI);
 		st1.areaOfCircles(12);
-		lengthOfCircles(20);
+		System.out.println(lengthOfCircles(20));
 		st1.showInfo(10);
 	}
 }
