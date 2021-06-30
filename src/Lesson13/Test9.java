@@ -1,23 +1,31 @@
-package Lesson12;
+package Lesson13;
 
-public class Test5 {
+public class Test9 {
 
 	static void time() {
+		int hours = 0;
+
 		OUTER:
-		for (int hours = 0; hours <= 6; hours++) {
+		while (hours < 6) {
+			int minutes = -1;
 			MIDDLE:
-			for (int minutes = 0; minutes <= 59; minutes++) {
+			do {
+				minutes++;
+
 				if (hours > 1 && minutes % 10 == 0) {
 					break OUTER;
 				}
+				int seconds = 0;
 				INNER:
-				for (int seconds = 0; seconds <= 59; seconds++) {
+				while (seconds < 60) {
 					if (seconds * hours > minutes) {
 						continue MIDDLE;
 					}
 					System.out.println(hours + ":" + minutes + ":" + seconds);
+					seconds++;
 				}
-			}
+			} while (minutes < 59);
+			hours++;
 		}
 	}
 
