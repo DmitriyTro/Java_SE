@@ -5,8 +5,8 @@ public class Test4 {
 		boolean result = true;
 
 		if (sb1.length() == sb2.length()) {
-			for (int i = 0; i < sb1.length(); i ++) {
-				if (sb2.charAt(i) != sb1.charAt(i)) {
+			for (int i = 0; i < sb1.length(); i++) {
+				if (sb1.charAt(i) != sb2.charAt(i)) {
 					result = false;
 					break;
 				}
@@ -16,8 +16,6 @@ public class Test4 {
 		}
 		return result;
 	}
-
-
 
 	public static void main(String[] args) {
 		StringBuilder stringBuilder = new StringBuilder("Hello");
