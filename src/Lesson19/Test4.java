@@ -1,16 +1,42 @@
 package Lesson19;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Test4 {
+
+}
+
+class Human2 {
+	String name;
+	String surname;
+
+	Human2() {
+
+	}
+
+	Human2(String name) {
+		this(name, null);
+		System.out.println(3);
+	}
+
+	Human2(String name, String surname) {
+		this.name = name;
+		this.surname = surname;
+		System.out.println(4);
+	}
+}
+
+class Student2 extends Human2 {
+
+	Student2() {
+		this(5);
+		System.out.println(1);
+	}
+
+	Student2(int i) {
+		super("Ivan");
+		System.out.println(2);
+	}
+
 	public static void main(String[] args) {
-		Map<Integer, String> map = new HashMap<>();
-		map.put(777, "Ivanov Mikhail");
-		map.put(778, "Sidorova Mariya");
-		map.put(779, "Petrova Anna");
-		map.put(777, "Novikova Marina");
-		map.remove(777);
-		System.out.println("Map = " + map);
+		Student2 student = new Student2();
 	}
 }
